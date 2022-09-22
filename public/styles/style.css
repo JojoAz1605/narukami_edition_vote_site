@@ -34,3 +34,16 @@ a {
 a:hover {
     color: green;
 }
+
+button {
+    border: none;
+    color: #4d3000;
+    background-color: #ce7f08;
+    padding: 15px 32px;
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    font-size: 32px;
+}
