@@ -41,7 +41,7 @@
                     .then(result => result.json())
                     .then(response => {
                         const { username, discriminator , id} = response;
-                        document.getElementById('info').innerText = `Connecté en tant que ${username}#${discriminator}, ton ID est le ${id}`;
+                        document.getElementById('info').innerHTML = `Connecté en tant que <b>${username}#${discriminator}</b>, ton ID est le <b>${id}</b>`;
                         document.querySelector("button").style.display = "block";
                         afficherParticipation("example");
                         afficherParticipation("oua");
@@ -53,6 +53,5 @@
                     .catch(console.error);
             };
         </script>
-
     </body>
 </html>
