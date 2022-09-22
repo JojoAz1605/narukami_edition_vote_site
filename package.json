@@ -1,0 +1,18 @@
+{
+  "name": "narukami_edition_vote_site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "discord.js": "^14.3.0",
+    "express": "^4.18.1",
+    "undici": "^5.10.0"
+  }
+}
