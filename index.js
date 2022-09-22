@@ -2,7 +2,6 @@ const express = require('express');
 const { port } = require('./config.json');
 const parseUrl = require('body-parser');
 const fs = require("fs");
-const https = require('https');
 
 const app = express();
 
@@ -44,17 +43,4 @@ app.post('/', encodeUrl, (req, res) => {
     res.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 });
 
-https
-    .createServer(
-        // Provide the private and public key to the server by reading each
-        // file's content with the readFileSync() method.
-        {
-            key: fs.readFileSync("cert/key.pem"),
-            cert: fs.readFileSync("cert/cert.pem"),
-        },
-        app
-    )
-    .listen(4000, () => {
-        console.log("server is running at port 4000");
-    });
-//app.listen(port, () => console.log(`Le serv écoute sur http://localhost:${port}`));
+app.listen(port, () => console.log(`Le serv écoute sur http://localhost:${port}`));
