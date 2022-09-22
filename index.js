@@ -55,6 +55,6 @@ https
         app
     )
     .listen(4000, () => {
-        console.log("serever is runing at port 4000");
+        console.log("server is running at port 4000");
     });
 //app.listen(port, () => console.log(`Le serv écoute sur http://localhost:${port}`));
