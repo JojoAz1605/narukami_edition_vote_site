@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-color: rgba(227, 180, 128, 0.6);
+    background-color: rgba(231, 206, 180, 0.7);
     width: 80%;
     display: table-cell;
     vertical-align: middle;
@@ -27,17 +27,21 @@ body {
     border-radius: 15px;
 }
 
+h1 {
+    color: #3a8000;
+}
+
 p, a {
     font-size: 20px;
 }
 
 a {
-    color: #d78d23;
+    color: #7e6116;
     transition-duration: 0.5s;
 }
 
 a:hover {
-    color: green;
+    color: #00a400;
 }
 
 button {
