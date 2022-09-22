@@ -34,7 +34,7 @@ app.post('/', encodeUrl, (req, res) => {
         let notePhoto = parseInt(req.body["photo"][i]);
         let data = noteTitre + noteDesc + notePhoto;
         voteData += data.toString() + "\n";
-    fs.writeFile("scores/" + userID + ".txt", voteData, function(err) {
+    fs.writeFile("scores/" + new Buffer(userID).toString("base64"), new Buffer(voteData).toString("base64"), function(err) {
         if (err) return console.log(err);
         console.log('OUAAAAAAAIS');
     });
