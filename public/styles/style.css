@@ -10,6 +10,7 @@ html, body {
 
 html {
     font-family: Verdana, sans-serif, "Khaenri'ah";
+    color: white;
     display: table;
     margin: auto;
     background: url(../images/background_image.png) no-repeat center center fixed;
