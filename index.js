@@ -34,7 +34,7 @@ app.post('/', encodeUrl, (req, res) => {
         let notePhoto = parseInt(req.body["photo"][i]);
         let data = noteTitre + noteDesc + notePhoto;
         voteData += data.toString() + "\n";
-    fs.writeFile("scores/" + new Buffer(userID).toString("base64"), new Buffer(voteData).toString("base64"), function(err) {
+    fs.writeFile("scores/" + userID + ".txt", voteData, function(err) {
         if (err) return console.log(err);
         console.log('OUAAAAAAAIS');
     });
@@ -43,4 +43,4 @@ app.post('/', encodeUrl, (req, res) => {
     res.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 });
 
-app.listen(port, () => console.log(`Le serv écoute sur http://localhost:${port}`));
+app.listen(port, () => console.log(`Le serv écoute sur http://176.159.155.219:${port}`));
