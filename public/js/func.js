@@ -26,10 +26,11 @@ async function afficherParticipation(username) {
     
     // défini les attributs de chaque éléments
     nom.innerText = username;
-    title.innerText = enJson.title;
-    desc.innerText = enJson.description;
+    title.innerHTML = enJson.title;
+    title.style.fontSize = "2em"
+    desc.innerHTML = enJson.description;
     photo.setAttribute("src", enJson.image);
-    photo.setAttribute("width", "400px");
+    photo.setAttribute("id", "photo");
 
     userIDInput.setAttribute("name", "userID");
     userIDInput.setAttribute("id", "userID");

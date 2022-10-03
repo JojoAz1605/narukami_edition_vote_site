@@ -25,6 +25,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
+    max-width: 45em;
 }
 
 canvas {
@@ -66,4 +67,18 @@ button {
     margin-right: auto;
     border-radius: 15px;
     font-size: 32px;
+}
+
+input, label {
+    font-size: 1.2em;
+}
+
+#photo {
+    width: auto;
+    max-width: 45em;
+    transition-duration: 0.5s;
+}
+
+#photo:hover {
+    max-width: 54em;
 }
