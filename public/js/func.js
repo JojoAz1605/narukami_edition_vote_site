@@ -26,7 +26,7 @@ async function afficherParticipation(username) {
     
     // défini les attributs de chaque éléments
     nom.innerText = username;
-    title.innerHTML = enJson.title;
+    title.innerHTML = "<u><b>" + enJson.title + "</b></u>";
     title.style.fontSize = "2em"
     desc.innerHTML = enJson.description;
     photo.setAttribute("src", enJson.image);
@@ -43,6 +43,7 @@ async function afficherParticipation(username) {
     noteTitre.setAttribute("type", "number");
     noteTitre.setAttribute("max", "1");
     noteTitre.setAttribute("min", "0");
+    noteTitre.setAttribute("required", "required");
     labTitre.setAttribute("for", "title");
     labTitre.innerText = "Note pour le titre(0 ou 1)(c'est un point bonus): ";
 
@@ -50,6 +51,7 @@ async function afficherParticipation(username) {
     noteDesc.setAttribute("type", "number");
     noteDesc.setAttribute("max", "4");
     noteDesc.setAttribute("min", "0");
+    noteDesc.setAttribute("required", "required");
     labDesc.setAttribute("for", "title");
     labDesc.innerText = "Note pour la description(de 0 à 4): ";
 
@@ -57,6 +59,7 @@ async function afficherParticipation(username) {
     notePhoto.setAttribute("type", "number");
     notePhoto.setAttribute("max", "6");
     notePhoto.setAttribute("min", "0");
+    notePhoto.setAttribute("required", "required");
     labPhoto.setAttribute("for", "title");
     labPhoto.innerText = "Note pour la photo(de 0 à 6): ";
     

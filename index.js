@@ -33,13 +33,13 @@ app.post('/', encodeUrl, (req, res) => {
         let noteDesc = parseInt(req.body["description"][i]);
         let notePhoto = parseInt(req.body["photo"][i]);
         let data = noteTitre + noteDesc + notePhoto;
-        voteData += data.toString() + "\n";
+        voteData += data.toString() + ' ';
     fs.writeFile("scores/" + userID + ".txt", voteData, function(err) {
         if (err) return console.log(err);
-        console.log('OUAAAAAAAIS');
+        console.log('Vote enregistré');
     });
     }
-
+    console.log("Vote enregistré!");
     res.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 });
 

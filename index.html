@@ -46,8 +46,13 @@
                         const { username, discriminator , id} = response;
                         document.getElementById('info').innerHTML = `Connecté en tant que <b>${username}#${discriminator}</b>, ton ID est le <b>${id}</b>`;
                         document.querySelector("button").style.display = "block";
-                        afficherParticipation("example");
+                        afficherParticipation("A_Ludovic");
                         afficherParticipation("Kazoohigh");
+                        afficherParticipation("Lia");
+                        afficherParticipation("Nemesis");
+                        afficherParticipation("Rafa1ere");
+                        afficherParticipation("Teddy");
+                        afficherParticipation("Yumeko");
                         let lesIDs = document.querySelectorAll("#userID")
                         for (let i = 0; i < lesIDs.length; i++) {
                             lesIDs[i].setAttribute("value", id);

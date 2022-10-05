@@ -67,6 +67,11 @@ button {
     margin-right: auto;
     border-radius: 15px;
     font-size: 32px;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: #e0ae6b;
 }
 
 input, label {
