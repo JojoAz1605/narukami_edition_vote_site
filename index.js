@@ -27,13 +27,14 @@ app.get('/', (request, response) => {
 app.post('/', encodeUrl, (req, res) => {
     let userID = req.body["userID"][0];
     log("Vote envoyé par " + userID + " adresse IP: " + req.ip);
-    let voteData = ""
+    let voteData = "";
+    console.log(req.body);
     for (let i = 0; i < req.body["title"].length; i++) {
         let noteTitre = parseInt(req.body["title"][i]);
         let noteDesc = parseInt(req.body["description"][i]);
         let notePhoto = parseInt(req.body["photo"][i]);
         let data = noteTitre + noteDesc + notePhoto;
-        voteData += data.toString() + ' ';
+        voteData += req.body["username"][i] + "=" + data.toString() + '\n';
     fs.writeFile("scores/" + userID + ".txt", voteData, function(err) {
         if (err) return console.log(err);
         console.log('Vote enregistré');

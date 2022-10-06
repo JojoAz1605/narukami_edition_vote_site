@@ -13,6 +13,7 @@ async function afficherParticipation(username) {
     let desc = document.createElement("p");
     let photo = document.createElement("img");
 
+    let nameInput = document.createElement("input");
     let userIDInput = document.createElement("input");
     let field = document.createElement("fieldset");
     let legend = document.createElement("legend");
@@ -31,6 +32,12 @@ async function afficherParticipation(username) {
     desc.innerHTML = enJson.description;
     photo.setAttribute("src", enJson.image);
     photo.setAttribute("id", "photo");
+
+    nameInput.setAttribute("name", "username");
+    nameInput.setAttribute("id", "username");
+    nameInput.setAttribute("type", "text");
+    nameInput.setAttribute("value", username);
+    nameInput.style.display = "none";
 
     userIDInput.setAttribute("name", "userID");
     userIDInput.setAttribute("id", "userID");
@@ -66,6 +73,7 @@ async function afficherParticipation(username) {
     // affiche sur la page
     leFormulaire.insertBefore(field, leBouton)
     field.appendChild(userIDInput);
+    field.appendChild(nameInput);
     field.appendChild(legend);
     field.appendChild(title);
     field.appendChild(desc);
@@ -88,5 +96,3 @@ async function afficherParticipation(username) {
 
     field.appendChild(document.createElement("br"));
 }
-
-// afficherParticipation("example").then(() => console.log("Ouais!"));  // ceci est un exemple, il faudra remplacer le example par le nom d'un participant pour l'afficher
