@@ -1,1 +1,7 @@
-3 3 3 3 11 3 
+A_Ludovic=3
+Kazoohigh=3
+Lia=3
+Nemesis=3
+Rafa1ere=3
+Yumeko=3
+Teddy=3

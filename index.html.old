@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="fr-FR">
+    <head>
+        <title>Concours - Photographe du Désert</title>
+        <meta charset="UTF-8">
+        <link href="/styles/style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    </head>
+    <body>
+        <img id="egg" src="/images/egg.png" style="opacity: 0.05; width: 50px">
+        <div style="text-align: center;">
+            <h1>Concours - Photographe du Désert</h1>
+            <img src="/images/cover.png" alt="Image de cover du concours" width=700em height="auto">
+            <p>
+                Bijour toua!!
+            </p>
+
+            <div id="info"><p>Commence par t'identifier avec le lien qui suit!<br>Ensuite nous commencerons les votes!<br></p></div>
+            <a id="login" style="display: none;" href="https://discord.com/api/oauth2/authorize?client_id=1021448678403227648&redirect_uri=http%3A%2F%2F176.159.155.219%3A53134&response_type=token&scope=identify">T'es qui toi?!</a>
+
+            <form action="/" method="post">
+                <input type="text" name="userID" id="userID" style="display: none">
+                <button type="submit" style="display: none">Voter!</button>
+            </form>
+            <canvas id="myCanvas" width="500" height="320"></canvas>
+            <script type="text/javascript" src="/js/background.js"></script>
+        </div>
+        <script type="text/javascript" src="/js/func.js"></script>
+        <script>
+            window.onload = () => {
+                const fragment = new URLSearchParams(window.location.hash.slice(1));
+                const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+
+                if (!accessToken) {
+                    return (document.getElementById('login').style.display = 'block');
+                }
+
+                fetch('https://discord.com/api/users/@me', {
+                    headers: {
+                        authorization: `${tokenType} ${accessToken}`,
+                    },
+                })
+                    .then(result => result.json())
+                    .then(response => {
+                        const { username, discriminator , id} = response;
+                        document.getElementById('info').innerHTML = `Connecté en tant que <b>${username}#${discriminator}</b>, ton ID est le <b>${id}</b>`;
+                        document.querySelector("button").style.display = "block";
+                        afficherParticipation("A_Ludovic");
+                        afficherParticipation("Kazoohigh");
+                        afficherParticipation("Lia");
+                        afficherParticipation("Nemesis");
+                        afficherParticipation("Rafa1ere");
+                        afficherParticipation("Teddy");
+                        afficherParticipation("Yumeko");
+                        let lesIDs = document.querySelectorAll("#userID")
+                        for (let i = 0; i < lesIDs.length; i++) {
+                            lesIDs[i].setAttribute("value", id);
+                        }
+                    })
+                    .catch(console.error);
+            };
+        </script>
+    </body>
+</html>
