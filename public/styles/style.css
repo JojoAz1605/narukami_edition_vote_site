@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-color: rgba(231, 206, 180, 0.7);
+    background-color: rgba(218, 180, 231, 0.2);
     width: 80%;
     display: table-cell;
     vertical-align: middle;
@@ -40,7 +40,7 @@ canvas {
 }
 
 h1 {
-    color: #3a8000;
+    color: #49297a;
 }
 
 p, a {
@@ -48,18 +48,18 @@ p, a {
 }
 
 a {
-    color: #7e6116;
+    color: #70167e;
     transition-duration: 0.5s;
 }
 
 a:hover {
-    color: #00a400;
+    color: #a47000;
 }
 
 button {
     border: none;
-    color: #4d3000;
-    background-color: #ce7f08;
+    color: #33004d;
+    background-color: rgba(133, 8, 206, 0.14);
     padding: 15px 32px;
     display: table-cell;
     vertical-align: middle;
@@ -71,7 +71,7 @@ button {
 }
 
 button:hover {
-    background-color: #e0ae6b;
+    background-color: #b16be0;
 }
 
 input, label {
