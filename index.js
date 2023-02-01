@@ -41,7 +41,7 @@ app.post('/', encodeUrl, (req, res) => {
     });
     }
     console.log("Vote enregistré!");
-    res.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    res.redirect('https://www.youtube.com/watch?v=QEaoDdplh4w');
 });
 
 app.listen(port, () => console.log(`Le serv écoute sur http://176.159.155.219:${port}`));
