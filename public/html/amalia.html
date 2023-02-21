@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mamalia</title>
+</head>
+<body>
+    <p style="font-size: 23px">Mamalia</p>
+    <script>
+        let para = document.querySelector("p");
+
+        setInterval(addA, 1);
+
+        function addA() {
+            if (para.innerText.length % 250 === 1) {
+                para.innerText += "\n";
+            }
+            para.innerText += "a";
+        }
+    </script>
+</body>
+</html>
